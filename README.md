@@ -14,7 +14,7 @@
 - 获取代码
 
   ```bash
-    git clone https://github.com/TwistFateCarry/skr-charts.git
+    git clone https://github.com/fe-charts/fe-charts.git
   ```
 
 - 安装依赖
