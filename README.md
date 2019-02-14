@@ -30,13 +30,7 @@
   ```bash
     git clone https://github.com/fe-charts/fe-charts.git
   ```
-# 项目规范
 
-采用 ES6 语法编码
-
-缩进 **2** 个空格
-
-代码提交写明注释(动词开头＋描述开发的功能或解决的问题)
 - 安装依赖
 
   ```bash
