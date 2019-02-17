@@ -1,4 +1,4 @@
-export const $ = function () {
+export const $ = (() => {
   let copyIsArray: boolean;
   const toString = Object.prototype.toString;
   const hasOwn = Object.prototype.hasOwnProperty;
@@ -22,11 +22,11 @@ export const $ = function () {
     return obj && typeof obj === "object" && "setInterval" in obj;
   }
 
-  const isArray = Array.isArray || function (obj: object) {
+  const isArray = Array.isArray || ((obj: object) => {
     return type(obj) === "array";
-  }
+  })
 
-  const isPlainObject = function (obj: any) {
+  const isPlainObject = (obj: any) => {
     if (!obj || type(obj) !== "object" || obj.nodeType || isWindow(obj)) {
       return false;
     }
@@ -43,30 +43,32 @@ export const $ = function () {
     return key === undefined || hasOwn.call(obj, key);
   }
 
-  const extend = function (deep: boolean, target: object, options: object) {
+  const extend = (deep: boolean, target: object, options: object) => {
     for (const name in options) {
-      const src = target[name];
-      const copy = options[name];
-      let clone;
+      if (options.hasOwnProperty(name)) {
+        const src = target[name];
+        const copy = options[name];
+        let clone;
 
-      if (target === copy) {
-        continue;
-      }
-
-      if (deep && copy &&
-        (isPlainObject(copy) || isArray(copy))) {
-        copyIsArray = isArray(copy)
-        if (copyIsArray) {
-          copyIsArray = false;
-          clone = src && isArray(src) ? src : [];
-
-        } else {
-          clone = src && isPlainObject(src) ? src : {};
+        if (target === copy) {
+          continue;
         }
 
-        target[name] = extend(deep, clone, copy);
-      } else if (copy !== undefined) {
-        target[name] = copy;
+        if (deep && copy &&
+          (isPlainObject(copy) || isArray(copy))) {
+          copyIsArray = isArray(copy)
+          if (copyIsArray) {
+            copyIsArray = false;
+            clone = src && isArray(src) ? src : [];
+
+          } else {
+            clone = src && isPlainObject(src) ? src : {};
+          }
+
+          target[name] = extend(deep, clone, copy);
+        } else if (copy !== undefined) {
+          target[name] = copy;
+        }
       }
     }
 
@@ -74,6 +76,6 @@ export const $ = function () {
   };
 
   return { extend };
-}();
+})();
 
 export default $;

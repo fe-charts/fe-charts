@@ -13,6 +13,7 @@ class Pie extends Core {
     right: number,
   }
   radius: number;
+  textInness: number;
   pie: any;
   path: any;
   paths: any;
@@ -74,7 +75,7 @@ class Pie extends Core {
     this.svg.html("");
     this.R = this.width - this.margin.left - this.margin.right;
     this.radius = this.R / 2;
-    this.pie = d3.pie().sort(null).value(d => d.value);
+    this.pie = d3.pie().sort(null).value((d: any) => d.value);
     this.path = d3.arc().outerRadius(this.radius).innerRadius(0);
 
     this.transition = d3.arc().outerRadius(1).innerRadius(0);
@@ -99,7 +100,7 @@ class Pie extends Core {
   animate() {
     this.paths.transition()
       .duration(500)
-      .delay((d, i) => i * 200)
+      .delay((d: any, i: number) => i * 200)
       .attr("d", this.path);
   }
 
@@ -112,15 +113,15 @@ class Pie extends Core {
     this.paths = this.arc.append("path")
       .attr("d", this.transition)
       .attr("class", "piePath")
-      .attr("fill", (d, i) => this.colorList[i]);
+      .attr("fill", (d: any, i: number) => this.colorList[i]);
 
     this.arc.append("text")
-      .attr("transform", d => `translate(${this.label.centroid(d)})`)
+      .attr("transform", (d: any) => `translate(${this.label.centroid(d)})`)
       .attr("dy", "-.5em")
       .attr("dx", "3")
       .attr("font-size", 12)
       .style("text-anchor", "middle")
-      .text(d => d.data.name);
+      .text((d: any) => d.data.name);
     if (this.hasAnimatetion) {
       this.animate();
     } else {

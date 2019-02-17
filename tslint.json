@@ -14,7 +14,7 @@
 		]
 	},
 	"rules": {
-		"forin": false,
+		"forin": true,
 		"member-ordering": false,
 		"only-arrow-functions": [
 			false,
