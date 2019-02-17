@@ -5,6 +5,7 @@
   "dependencies": {
     "@types/d3": "^5.7.1",
     "antd": "^3.13.2",
+    "d3": "^5.9.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts-ts-antd": "2.17.0",
