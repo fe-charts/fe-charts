@@ -29,9 +29,8 @@ class Pie extends Core {
 
   constructor(el: any, option: object) {
     super();
-    this.el = el;
     const o: object = {
-      el: null,
+      el,
       width: 500,
       height: 500,
       data: [
