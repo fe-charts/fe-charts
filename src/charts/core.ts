@@ -22,10 +22,6 @@ class Core {
       this.data.sort((a, b) => b.value - a.value);
     }
   }
-
-  init() {
-
-  }
 }
 
 export default Core;
