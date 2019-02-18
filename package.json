@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/d3": "^5.7.1",
     "antd": "^3.13.2",
     "d3": "^5.9.1",
     "react": "^16.8.1",
