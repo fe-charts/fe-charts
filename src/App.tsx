@@ -22,8 +22,8 @@ class App extends React.Component {
         <Rate character="skr,skr,skr" />
         <svg width={500} height={500} ref={this.setRef} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
