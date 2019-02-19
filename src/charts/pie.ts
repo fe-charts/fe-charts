@@ -3,17 +3,23 @@ import * as d3 from 'd3';
 import Core from './core';
 import Util from '../common/util';
 
+import { Imargin } from './index.d';
+
 class Pie extends Core {
-  svg: any;
-  el: any;
-  R: number;
-  width: number;
-  margin: {
-    left: number,
-    right: number,
+  width: number = 500;
+  height: number = 500;
+  margin: Imargin = {
+    top: 20,
+    left: 40,
+    right: 20,
+    bottom: 20
   }
+  textInness: number = 20;
+  hasAnimatetion: boolean = true;
+  colorList: ReadonlyArray<string> = d3.schemeCategory10;
+
+  R: number;
   radius: number;
-  textInness: number;
   pie: any;
   path: any;
   paths: any;
@@ -21,57 +27,13 @@ class Pie extends Core {
   transition: any;
   label: any;
   group: any;
-  ascending: boolean;
-  descending: boolean;
-  hasAnimatetion: boolean;
-  data: Array<any>;
-  colorList: Array<any>;
 
   constructor(el: any, option: object) {
-    super();
-    const o: object = {
-      el,
-      width: 500,
-      height: 500,
-      data: [
-        {
-          name: "苹果",
-          value: 40
-        },
-        {
-          name: "香蕉",
-          value: 30
-        },
-        {
-          name: "橘子",
-          value: 20
-        },
-        {
-          name: "葡萄",
-          value: 40
-        },
-        {
-          name: "芒果",
-          value: 20
-        }
-      ],
-      margin: {
-        top: 20,
-        left: 40,
-        right: 20,
-        bottom: 20
-      },
-      colorList: d3.schemeCategory10,
-      textInness: 20,
-      hasAnimatetion: true
-    };
-    Util.extend(true, o, option);
-    Util.extend(true, this, o);
+    super(el, option);
+
     this.init();
   }
   init() {
-    this.svg = d3.select(this.el);
-    this.svg.html("");
     this.R = this.width - this.margin.left - this.margin.right;
     this.radius = this.R / 2;
     this.pie = d3.pie().sort(null).value((d: any) => d.value);
@@ -84,16 +46,6 @@ class Pie extends Core {
       .attr("transform", `translate(${(this.width - this.R) / 2 + this.radius},${(this.width - this.R) / 2 + this.radius})`);
     this.processData();
     this.addArc();
-  }
-
-  processData() {
-    if (this.ascending) {
-      this.data.sort((a, b) => a.value - b.value);
-      return;
-    }
-    if (this.descending) {
-      this.data.sort((a, b) => b.value - a.value);
-    }
   }
 
   animate() {
