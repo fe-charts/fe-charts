@@ -1,7 +1,6 @@
 import * as d3 from 'd3';
 
 import Core from './core';
-import Util from '../common/util';
 
 import { Imargin } from './index.d';
 
