@@ -1,7 +1,7 @@
 {
   "name": "fe-charts",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "d3": "^5.9.1",
     "three": "^0.101.1"
@@ -19,5 +19,20 @@
     "typescript": "^3.3.3333",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3"
-  }
+  },
+  "description": "暂无",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fe-charts/fe-charts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fe-charts/fe-charts/issues"
+  },
+  "homepage": "https://github.com/fe-charts/fe-charts#readme"
 }
