@@ -1,6 +1,6 @@
 {
   "name": "fe-charts",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "dependencies": {
     "d3": "^5.9.1",
