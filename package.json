@@ -1,9 +1,11 @@
 {
   "name": "fe-charts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "dependencies": {
     "d3": "^5.9.1",
+    "@types/d3": "^5.7.1",
+    "@types/three": "^0.93.20",
     "three": "^0.101.1"
   },
   "scripts": {
@@ -12,9 +14,7 @@
     "test": "webpack --config webpack.test.json.js"
   },
   "devDependencies": {
-    "@types/d3": "^5.7.1",
     "@types/node": "^11.9.0",
-    "@types/three": "^0.93.20",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.3333",
     "webpack": "^4.29.5",
