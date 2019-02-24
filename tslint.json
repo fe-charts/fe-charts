@@ -1,62 +1,62 @@
 {
-	"extends": [
-		"tslint:recommended",
-		"tslint-react",
-		"tslint-config-prettier"
-	],
-	"linterOptions": {
-		"exclude": [
-			"config/**/*.js",
-			"node_modules/**/*.ts",
-			"tests-coverage/**.*",
-			"jest.setup.js",
-			"jest.config.js"
-		]
-	},
-	"rules": {
-		"forin": true,
-		"member-ordering": false,
-		"only-arrow-functions": [
-			false,
-			"allow-declarations",
-			"allow-named-functions"
-		],
-		"no-unused-expression": [
-			true,
-			"allow-fast-null-checks"
-		],
-		"member-access": [
-			true,
-			"no-public"
-		],
-		"object-literal-sort-keys": false,
-		"no-console": [
-			true,
-			"warning"
-		],
-		"jsx-boolean-value": "never",
-		"ordered-imports": false,
-		"no-debugger": false,
-		"array-type": false,
-		"no-empty": false,
-		"indent": [
-			"error",
-			2
-		],
-		"linebreak-style": [
-			"error",
-			"unix"
-		],
-		"quotes": [
-			"error",
-			"single"
-		],
-		"semi": [
-			"error",
-			"never"
-		]
-	},
-	"jsRules": {
-		"object-literal-sort-keys": false
-	}
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "tests-coverage/**.*",
+      "jest.setup.js",
+      "jest.config.js"
+    ]
+  },
+  "rules": {
+    "forin": true,
+    "member-ordering": false,
+    "only-arrow-functions": [
+      false,
+      "allow-declarations",
+      "allow-named-functions"
+    ],
+    "no-unused-expression": [
+      true,
+      "allow-fast-null-checks"
+    ],
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "object-literal-sort-keys": false,
+    "no-console": [
+      true,
+      "warning"
+    ],
+    "jsx-boolean-value": "never",
+    "ordered-imports": false,
+    "no-debugger": false,
+    "array-type": false,
+    "no-empty": false,
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false
+  }
 }
