@@ -20,6 +20,9 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true
   },
+  "include": [
+    "src/**/*.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "build",

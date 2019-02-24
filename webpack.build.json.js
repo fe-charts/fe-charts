@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: './src/feCharts.ts',
+  entry: './src/index.js',
   module: {
     rules: [
       {
