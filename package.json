@@ -1,6 +1,6 @@
 {
   "name": "fe-charts",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": false,
   "dependencies": {
     "d3": "^5.9.1",
@@ -34,5 +34,6 @@
   "bugs": {
     "url": "https://github.com/fe-charts/fe-charts/issues"
   },
-  "homepage": "https://github.com/fe-charts/fe-charts#readme"
+  "homepage": "https://github.com/fe-charts/fe-charts#readme",
+  "types": "src/index.d.ts"
 }
