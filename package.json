@@ -21,7 +21,7 @@
     "webpack-cli": "^3.2.3"
   },
   "description": "暂无",
-  "main": "src/index.js",
+  "main": "dist/feCharts.js",
   "directories": {
     "test": "test"
   },

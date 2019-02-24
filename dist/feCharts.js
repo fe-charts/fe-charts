@@ -6342,11 +6342,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _charts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./charts */ \"./src/charts/index.ts\");\n/* empty/unused harmony star reexport */\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _charts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./charts */ \"./src/charts/index.ts\");\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  Charts: _charts__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\r\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
